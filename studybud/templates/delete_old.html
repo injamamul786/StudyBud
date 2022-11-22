@@ -1,0 +1,9 @@
+{% include 'main.html' %}
+
+
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>Are you sure want to delete '{{obj}}'?</p>
+    <a href="{{request.META.HTTP_REFERER}}">Go Back</a>
+    <input type="submit" value="confirm" />
+</form>
